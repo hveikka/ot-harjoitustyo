@@ -5,3 +5,6 @@
 
 
 [komentorivi.txt](https://github.com/hveikka/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+
+**Viikko 2**
