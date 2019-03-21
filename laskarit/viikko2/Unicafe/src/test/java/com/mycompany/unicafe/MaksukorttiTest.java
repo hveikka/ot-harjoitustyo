@@ -45,20 +45,20 @@ public class MaksukorttiTest {
     @Test
     public void trueJosRahaa() {
         kortti.otaRahaa(5);
- 
+
         assertTrue(kortti.otaRahaa(3));
     }
 
     @Test
     public void falseJosEiRahaa() {
         kortti.otaRahaa(5);
-        
+
         assertFalse(kortti.otaRahaa(10));
     }
+
     @Test
     public void korttiPrinttaaOikein() {
         assertEquals("saldo: 0.10", kortti.toString());
-        
-        
+
     }
 }
