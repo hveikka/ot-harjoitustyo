@@ -4,13 +4,11 @@
 Sovellus antaa käyttäjälle kysymyksiä ja käyttäjä yrittää päästä mahdollisimman pitkälle.
 
 
-**Käyttäjät**
-
-Sovelluksella on vain yksi käyttäjä eli pelaaja.
-
 **Käyttöliittymäluonnos**
 
-Lisää käyttis tähän
+![alt text](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/vaatimuskuva.jpg)
+
+Ensimmäisessä näkymässä käyttäjä voi katsoa ohjeet (unohtuivat hienosta paint-taideteoksesta), katsoa pistelistoja tai lisätä nimensä ja aloittaa peli. Seuraavassa näkymässä on mahdollinen toteutus itse pelille. Ohjelma arpoo kysymyksiä tietokannasta ja jos käyttäjä vastaa oikein hän saa uuden kysymyksen. Kun käyttäjä vastaa lopulta väärin, tulee näkymä jossa on parhaat pisteet ja mahdollisuus aloittaa alusta (ja hänen omat pisteensä tietenkin..).
 
 **Perusversion toiminnallisuus**
 
