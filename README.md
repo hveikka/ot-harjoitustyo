@@ -30,5 +30,9 @@ ohjaajat voivat niitä tutkia.
 
 **Viikko 3**
 
+[Luokka- ja sekvenssikaaviot](https://github.com/hveikka/ot-harjoitustyo/blob/master/laskarit/viikko3/viikko3.md)
+
+
+
 
 
