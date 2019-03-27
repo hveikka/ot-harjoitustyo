@@ -1,7 +1,9 @@
 package arvauspeli;
 
+import java.util.Random;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -10,7 +12,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -20,104 +25,52 @@ public class MainWindow extends Application {
 
     @Override
     public void start(Stage stage) {
-        stage.setTitle("Arvauspeli");
+        Questions kyssarit = new Questions();
+        
+        StartWindow startW = new StartWindow();
+        GameView gameW = new GameView();
+
+        BorderPane mainComp = new BorderPane();
+
+        HBox mainbox = new HBox();
+        
+
+        mainbox.setPadding(new Insets(20, 20, 20, 20));
+
+        mainbox.setSpacing(10);
+
+        Button startButton = new Button("Aloita");
+        Button endButton = new Button("Alkuun");
+        endButton.setVisible(false);
+        mainbox.getChildren().addAll(endButton);
+        mainComp.setTop(mainbox);
+        mainComp.setAlignment(startButton, Pos.CENTER);
+        mainComp.setBottom(startButton);
+        
+
+
+        startButton.setOnMouseClicked((event) -> {
+            mainComp.setCenter(gameW.getGameview());
+            startButton.setVisible(false);
+            endButton.setVisible(true);
+
+        });
+
+        
+        endButton.setOnMouseClicked((event) -> {
+            mainComp.setCenter(startW.getStart());
+            startButton.setVisible(true);
+            endButton.setVisible(false);
+            
+
+        });
+
+        Scene mainView = new Scene(mainComp, 600, 480);
+
+        mainComp.setCenter(startW.getStart());
+        stage.setScene(mainView);
+
         stage.show();
-
-        //Apua osio
-        Button helpBack = new Button("Takaisin");
-        Text helpTitle = new Text("Ohjeet");
-        helpTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 30));
-        GridPane helpComp = new GridPane();
-        helpComp.add(helpTitle, 0, 0, 2, 1);
-        Text helpText = new Text("Ensimmäisessä näkymässä kirjoita nimesi, "
-                + "ja paina 'Aloita'." + "\n" + "Sinulle annetaan kysymyksiä ja jos vastaat oikein saat jatkaa."
-                + "\n" + "Peli päättyy jos vastaat väärin.");
-        helpComp.add(helpText, 0, 2);
-        helpComp.add(helpBack, 0, 3);
-        helpComp.setAlignment(Pos.CENTER);
-        helpComp.setHgap(20);
-        helpComp.setVgap(20);
-
-        Scene helpview = new Scene(helpComp, 500, 400);
-
-        //Päänäkymä
-        Label nameLabel = new Label("Kirjoita nimesi: ");
-        TextField nameField = new TextField();
-        Button startGame = new Button("Aloita");
-        Button help = new Button("Ohjeet");
-        Button score = new Button("Pisteet");
-        GridPane components = new GridPane();
-        Text scenetitle = new Text("Arvauspeli");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 30));
-        components.add(scenetitle, 0, 0, 2, 1);
-        components.add(nameLabel, 0, 3);
-        components.add(nameField, 0, 4);
-        components.add(help, 0, 2);
-        components.add(score, 1, 2);
-        components.add(startGame, 0, 5);
-        components.setAlignment(Pos.CENTER);
-        components.setHgap(20);
-        components.setVgap(20);
-        components.setPadding(new Insets(25, 25, 25, 25));
-
-        Scene view = new Scene(components, 500, 400);
-        stage.setScene(view);
-        stage.show();
-        
-        //Pelinäkymä
-        GridPane gameComponents = new GridPane();
-
-        Label qField = new Label("Kyssäri");
-        TextField ansField = new TextField();
-        Button stop = new Button("Takaisin");
-        gameComponents.setAlignment(Pos.CENTER);
-        gameComponents.add(qField, 0, 1);
-        gameComponents.add(ansField, 0, 3);
-        gameComponents.add(stop, 0, 4);
-        Scene gameView = new Scene(gameComponents, 500, 400);
-        
-        //Pisteet
-        GridPane scoreComp = new GridPane();
-
-        Label scoreTitle = new Label("Tämä osio on vielä kesken :(");
-        
-        Button backScore = new Button("Takaisin");
-        scoreComp.setAlignment(Pos.CENTER);
-        scoreComp.setHgap(20);
-        scoreComp.setVgap(20);
-        scoreComp.add(scoreTitle, 0, 1);
-        scoreComp.add(backScore, 0, 6);
-        Scene scoreView = new Scene(scoreComp, 500, 400);
-        
-
-        
-
-        //ikkunoiden välillä seikkailu
-        helpBack.setOnAction((event) -> {
-
-            stage.setScene(view);
-        });
-        backScore.setOnAction((event) -> {
-
-            stage.setScene(view);
-        });
-        score.setOnAction((event) -> {
-
-            stage.setScene(scoreView);
-        });
-        startGame.setOnAction((event) -> {
-
-            stage.setScene(gameView);
-        });
-        stop.setOnAction((event) -> {
-
-            stage.setScene(view);
-        });
-
-        help.setOnAction((event) -> {
-
-            stage.setScene(helpview);
-        });
 
     }
 
