@@ -1,5 +1,6 @@
-package arvauspeli;
+package arvauspeli.gui;
 
+import arvauspeli.Questions;
 import java.util.Random;
 import javafx.application.Application;
 import static javafx.application.Application.launch;

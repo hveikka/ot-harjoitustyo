@@ -1,5 +1,6 @@
-package arvauspeli;
+package arvauspeli.gui;
 
+import arvauspeli.gui.MainWindow;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -67,6 +68,10 @@ public class StartWindow extends MainWindow {
             main1.setCenter(null);
             main1.setCenter(components);
             back.setVisible(false);
+
+        });
+        score.setOnMouseClicked((event) -> {
+            score.setText("Ei toimi vielä");
 
         });
 

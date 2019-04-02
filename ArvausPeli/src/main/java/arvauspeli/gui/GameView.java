@@ -1,5 +1,7 @@
-package arvauspeli;
+package arvauspeli.gui;
 
+import arvauspeli.Question;
+import arvauspeli.Questions;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -31,7 +33,7 @@ public class GameView extends StartWindow {
 
     }
 
-    public Parent getGameview() {
+    public Parent getGameview() { 
 
         GridPane components = new GridPane();
         VBox questionsBox = new VBox();
