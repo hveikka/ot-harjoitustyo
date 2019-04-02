@@ -7,20 +7,23 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
-public class StartWindow {
+public class StartWindow extends MainWindow { 
 
-    public String nimi;
+    public static String nimi;
 
     public StartWindow() {
 
     }
 
     public Parent getStart() {
+
+        BorderPane main1 = new BorderPane();
 
         Label nameLabel = new Label("Kirjoita nimesi ja paina Enter");
         TextField nameField = new TextField();
@@ -41,18 +44,36 @@ public class StartWindow {
         components.setVgap(20);
         components.setPadding(new Insets(25, 25, 25, 25));
 
+        main1.setCenter(components);
+
         nameField.setOnKeyPressed((event) -> {
             if (event.getCode() == KeyCode.ENTER) {
                 this.nimi = nameField.getText();
                 scenetitle.setText("Hei " + nimi + "!");
-                
+
             }
         });
+        Button back = new Button("Takaisin");
+        HelpView helpW = new HelpView();
+        help.setOnMouseClicked((event) -> {
+            main1.setCenter(null);
+            main1.setCenter(helpW.getHelpView());
 
-        return components;
+            main1.setRight(back);
+            back.setVisible(true);
+
+        });
+        back.setOnMouseClicked((event) -> {
+            main1.setCenter(null);
+            main1.setCenter(components);
+            back.setVisible(false);
+
+        });
+
+        return main1;
     }
 
-    public String getNimi() {
+    public static String getNimi() {
         return nimi;
     }
 }

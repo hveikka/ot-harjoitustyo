@@ -26,42 +26,39 @@ public class MainWindow extends Application {
     @Override
     public void start(Stage stage) {
         Questions kyssarit = new Questions();
-        
+
         StartWindow startW = new StartWindow();
         GameView gameW = new GameView();
 
         BorderPane mainComp = new BorderPane();
 
         HBox mainbox = new HBox();
-        
 
         mainbox.setPadding(new Insets(20, 20, 20, 20));
 
         mainbox.setSpacing(10);
 
-        Button startButton = new Button("Aloita");
-        Button endButton = new Button("Alkuun");
+        Button startButton = new Button("Aloita peli");
+        Button endButton = new Button("Lopeta peli");
         endButton.setVisible(false);
         mainbox.getChildren().addAll(endButton);
         mainComp.setTop(mainbox);
-        mainComp.setAlignment(startButton, Pos.CENTER);
         mainComp.setBottom(startButton);
-        
-
+        mainComp.setAlignment(startButton, Pos.BOTTOM_CENTER);
+        mainComp.setStyle("-fx-padding: 50;");
 
         startButton.setOnMouseClicked((event) -> {
             mainComp.setCenter(gameW.getGameview());
             startButton.setVisible(false);
             endButton.setVisible(true);
+            gameW.getGameview();
 
         });
 
-        
         endButton.setOnMouseClicked((event) -> {
             mainComp.setCenter(startW.getStart());
             startButton.setVisible(true);
             endButton.setVisible(false);
-            
 
         });
 
