@@ -1,5 +1,7 @@
-package arvauspeli;
+package arvauspeli.notUi;
 
+import arvauspeli.Question;
+import arvauspeli.Questions;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -20,6 +22,14 @@ public class QuestionTest {
         testQuestions.addQuestion("a", "b", "c", "d", "e");
         assertEquals(testQuestions.getQuests().size(), 1);
 
+    }
+    @Test
+    public void getsAndSets(){
+        assertEquals(testQuestion.getA(), "a");
+        assertEquals(testQuestion.getB(), "b");
+        assertEquals(testQuestion.getC(), "c");
+        assertEquals(testQuestion.getOikea(), "oikea");
+        assertEquals(testQuestion.getQuest(), "main");
     }
 
     @Test

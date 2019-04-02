@@ -11,7 +11,9 @@ Ohjelman parantelua, testien tekemistä.
 
 **2.4. / 4h**
 
-Ohjelman laajennus, olioiden muokkaus, lisää testejä, checkstyle
+Ohjelman laajennus, olioiden muokkaus, lisää testejä, Jacoco toimimaan
+
+(checkstyle viikko 4 varten ja pari muuta viikon 4 juttua) 
 
 
 **Yhteensä**

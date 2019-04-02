@@ -2,6 +2,7 @@ package arvauspeli.gui;
 
 import arvauspeli.Question;
 import arvauspeli.Questions;
+import arvauspeli.User;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -14,15 +15,15 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class GameView extends StartWindow {
+public class GameView extends User {
 
     private Questions questions;
     private Question question;
-    private int score;
+
 
     public GameView() {
         this.questions = new Questions();
-        this.score = 0;
+
 
         questions.addQuestion("Mikä numeroista on isoin?", "2", "3", "1", "3");
         questions.addQuestion("Mikä ruuista on paras?", "Pulla", "Pitsa", "Nauris", "Pitsa");
@@ -34,9 +35,13 @@ public class GameView extends StartWindow {
     }
 
     public Parent getGameview() { 
+        
+        BorderPane main1 = new BorderPane();
 
         GridPane components = new GridPane();
         VBox questionsBox = new VBox();
+        
+        EndView endW = new EndView();
 
         Label q1 = new Label(this.question.getQuest());
         Label q2 = new Label(this.question.getA());
@@ -52,16 +57,17 @@ public class GameView extends StartWindow {
         components.setHgap(10);
         components.setPadding(new Insets(10, 10, 10, 10));
 
-        String lol = StartWindow.getNimi();
+        String lol = User.getName();
         Label ansButton = new Label("Kirjoita vastauksesi ja paina 'Enter'");
         Label right = new Label("");
-        Label counter = new Label("Oikeita vastauksia: " + score);
+        Label counter = new Label("Oikeita vastauksia: " + User.getScore());
         components.add(questionsBox, 2, 0);
         components.add(ansField, 2, 1);
         components.add(ansButton, 2, 2);
         components.add(right, 0, 2);
         components.add(counter, 0, 0);
-
+        
+        main1.setCenter(components);
         ansField.setOnKeyPressed((event) -> {
             if (event.getCode() == KeyCode.ENTER) {
 
@@ -69,7 +75,7 @@ public class GameView extends StartWindow {
 
                 if (ansField.getText().equals(question.getOikea())) {
 
-                    score++;
+                    User.setScore(User.getScore() + 1);
 
                     this.question = questions.rollQuest();
                     ansField.clear();
@@ -77,23 +83,20 @@ public class GameView extends StartWindow {
                     q2.setText(question.getA());
                     q3.setText(question.getB());
                     q4.setText(question.getC());
-                    counter.setText("Oikeita vastauksia: " + score);
+                    counter.setText("Oikeita vastauksia: " + User.getScore());
                     right.setText("");
 
                 } else {
 
-                    right.setText("Väärin! Aloita uudestaan.");
-                    score = 0;
-                    counter.setText("Oikeita vastauksia: " + score);
-                    ansField.clear();
-                    return;
+                    main1.setCenter(null);
+                    main1.setCenter(endW.getEndView());
                 }
 
             }
 
         });
 
-        return components;
+        return main1;
 
     }
 

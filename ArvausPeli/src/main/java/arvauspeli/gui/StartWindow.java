@@ -1,5 +1,6 @@
 package arvauspeli.gui;
 
+import arvauspeli.User;
 import arvauspeli.gui.MainWindow;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -17,6 +18,7 @@ import javafx.scene.text.Text;
 public class StartWindow extends MainWindow { 
 
     public static String nimi;
+    User user = new User();
 
     public StartWindow() {
 
@@ -49,8 +51,8 @@ public class StartWindow extends MainWindow {
 
         nameField.setOnKeyPressed((event) -> {
             if (event.getCode() == KeyCode.ENTER) {
-                this.nimi = nameField.getText();
-                scenetitle.setText("Hei " + nimi + "!");
+                user.setUser(nameField.getText());
+                scenetitle.setText("Hei " + user.getName() + "!");
 
             }
         });
