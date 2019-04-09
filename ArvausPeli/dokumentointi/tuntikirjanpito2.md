@@ -13,9 +13,13 @@ Ohjelman parantelua, testien tekemistä.
 
 Ohjelman laajennus, olioiden muokkaus, lisää testejä, Jacoco toimimaan
 
-(checkstyle viikko 4 varten ja pari muuta viikon 4 juttua) 
+(checkstyle viikko 4 varten ja pari muuta viikon 4 juttua)
+
+**9.4. / 4h**
+
+Ohjelman laajennus/muokkaus, arkkitehtuuri-osion päivitys. Joitain viikon 5 juttuja.
 
 
 **Yhteensä**
 
-12h
+16h
