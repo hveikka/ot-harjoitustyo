@@ -1,7 +1,7 @@
 package arvauspeli.notUi;
 
-import arvauspeli.Question;
-import arvauspeli.Questions;
+import arvauspeli.logics.Question;
+import arvauspeli.logics.Questions;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

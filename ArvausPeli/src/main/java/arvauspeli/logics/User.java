@@ -1,5 +1,5 @@
 
-package arvauspeli;
+package arvauspeli.logics;
 
 
 public class User {

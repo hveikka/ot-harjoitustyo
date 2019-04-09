@@ -1,7 +1,7 @@
 
 package arvauspeli.notUi;
 
-import arvauspeli.User;
+import arvauspeli.logics.User;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

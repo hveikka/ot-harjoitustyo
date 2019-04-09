@@ -1,4 +1,4 @@
-package arvauspeli;
+package arvauspeli.logics;
 
 public class Question {
 

@@ -1,7 +1,7 @@
 package arvauspeli.gui;
 
-import arvauspeli.User;
-import arvauspeli.gui.MainWindow;
+import arvauspeli.logics.User;
+import arvauspeli.gui.MainView;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -15,12 +15,12 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
-public class StartWindow extends MainWindow { 
+public class StartView extends MainView { 
 
     public static String nimi;
     User user = new User();
 
-    public StartWindow() {
+    public StartView() {
 
     }
 

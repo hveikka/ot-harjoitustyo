@@ -1,8 +1,8 @@
 package arvauspeli.gui;
 
-import arvauspeli.Question;
-import arvauspeli.Questions;
-import arvauspeli.User;
+import arvauspeli.logics.Question;
+import arvauspeli.logics.Questions;
+import arvauspeli.logics.User;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;

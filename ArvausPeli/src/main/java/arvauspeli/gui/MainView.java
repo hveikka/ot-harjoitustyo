@@ -1,7 +1,7 @@
 package arvauspeli.gui;
 
-import arvauspeli.Questions;
-import arvauspeli.User;
+import arvauspeli.logics.Questions;
+import arvauspeli.logics.User;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.geometry.Insets;
@@ -12,12 +12,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class MainWindow extends Application {
+public class MainView extends Application {
 
     @Override
     public void start(Stage stage) {
 
-        StartWindow startW = new StartWindow();
+        StartView startW = new StartView();
         GameView gameW = new GameView();
 
         BorderPane mainComp = new BorderPane();
@@ -62,6 +62,6 @@ public class MainWindow extends Application {
     }
 
     public static void main(String[] args) {
-        launch(MainWindow.class);
+        launch(MainView.class);
     }
 }

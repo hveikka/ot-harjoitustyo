@@ -1,4 +1,4 @@
-package arvauspeli;
+package arvauspeli.logics;
 
 import java.util.ArrayList;
 import java.util.Random;

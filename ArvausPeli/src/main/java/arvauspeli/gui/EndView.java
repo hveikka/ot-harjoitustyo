@@ -1,7 +1,7 @@
 
 package arvauspeli.gui;
 
-import arvauspeli.User;
+import arvauspeli.logics.User;
 import javafx.geometry.Insets;
 
 import javafx.scene.Parent;
