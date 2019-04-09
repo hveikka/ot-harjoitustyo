@@ -8,7 +8,7 @@ Tällä hetkellä ohjelma koostuu eri näkymistä jotka hyödyntävät kysymyslu
 ![alt text](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/pakettikaavio.jpg)
 
 
-##Käyttöliittymä
+## Käyttöliittymä
 
 Ohjelma rakennettiin useaan eri käyttöliittymään joiden välillä vaihdellaan.
 Halutun näkymän komponentit haetaan ja sijoitetaan aina alkuperäisen stagen keskelle. Tämä 
@@ -32,7 +32,7 @@ Loppunäkymä. Kun käyttäjä on hävinnyt pelin EndView näyttää lopulliset 
 
 
 
-##Sovelluslogiikka
+## Sovelluslogiikka
 
 Ohjelma sisältää hyvin vähän sovelluslogiikkaa sen rakenteen takia. Tässä kuitenkin jonkinlainen esimerkki rakenteesta.
 
