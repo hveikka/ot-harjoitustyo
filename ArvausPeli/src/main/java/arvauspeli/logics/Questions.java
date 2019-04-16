@@ -14,24 +14,22 @@ public class Questions {
 
     }
 
-    public void addQuestion(String main, String a, String b, String c, String oikea) { 
+    public void addQuestion(String main, String a, String b, String c, String oikea) {
         allQuestions.add(new Question(main, a, b, c, oikea));
     }
 
-    public ArrayList getQuests() { 
+    public ArrayList getQuests() {
         return allQuestions;
     }
 
-    public Question rollQuest() { 
+    public Question rollQuest() {
         Random ranm = new Random();
-        
+
         int number = ranm.nextInt(allQuestions.size());
-        while(number == memory){
+        while (number == memory) {
             number = ranm.nextInt(allQuestions.size());
         }
         memory = number;
-        
-        
 
         return allQuestions.get(number);
     }
