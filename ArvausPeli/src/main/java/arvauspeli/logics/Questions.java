@@ -6,6 +6,7 @@ import java.util.Random;
 public class Questions {
 
     public ArrayList<Question> allQuestions;
+    public int memory = 0;
 
     public Questions() {
 
@@ -23,7 +24,15 @@ public class Questions {
 
     public Question rollQuest() { 
         Random ranm = new Random();
+        
+        int number = ranm.nextInt(allQuestions.size());
+        while(number == memory){
+            number = ranm.nextInt(allQuestions.size());
+        }
+        memory = number;
+        
+        
 
-        return allQuestions.get(ranm.nextInt(allQuestions.size()));
+        return allQuestions.get(number);
     }
 }

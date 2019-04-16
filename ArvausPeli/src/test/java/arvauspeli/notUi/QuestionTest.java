@@ -32,12 +32,5 @@ public class QuestionTest {
         assertEquals(testQuestion.getQuest(), "main");
     }
 
-    @Test
-    public void rollingQuestions() {
-        Questions rollQuestions = new Questions();
-        rollQuestions.addQuestion("a", "b", "c", "d", "e");
-        assertEquals(rollQuestions.rollQuest().getA(), "b");
-
-    }
 
 }

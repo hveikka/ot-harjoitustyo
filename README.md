@@ -15,7 +15,11 @@ Sovelluksen avulla pystyy pelaamaan arvailupeliä. Yritä vastata mahdollisimman
 [Arkkitehtuuri](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/arkkitehtuuri.md)
 
 
-**Komentorivitoiminnot**
+**Releaset**
+
+
+[Viikon 5 release](https://github.com/hveikka/ot-harjoitustyo/releases/tag/viikko5)
+
 
 
 

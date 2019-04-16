@@ -1,6 +1,5 @@
 package arvauspeli.gui;
 
-import arvauspeli.logics.Questions;
 import arvauspeli.logics.User;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -34,10 +33,13 @@ public class MainView extends Application {
         mainbox.getChildren().addAll(endButton);
         mainComp.setTop(mainbox);
         mainComp.setBottom(startButton);
-        mainComp.setAlignment(startButton, Pos.BOTTOM_CENTER);
+        BorderPane.setAlignment(startButton, Pos.BOTTOM_CENTER);
         mainComp.setStyle("-fx-padding: 50;");
 
         startButton.setOnMouseClicked((event) -> {
+            if (User.getName() == null) {
+                return;
+            }
             mainComp.setCenter(gameW.getGameview());
             startButton.setVisible(false);
             endButton.setVisible(true);
