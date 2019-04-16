@@ -20,6 +20,11 @@ Ohjelman laajennus, olioiden muokkaus, lisää testejä, Jacoco toimimaan
 Ohjelman laajennus/muokkaus, arkkitehtuuri-osion päivitys. Joitain viikon 5 juttuja.
 
 
+**16.4. / 6h**
+
+Pistetiedoston lisäys, ulkoasun muokkaus, kysymysten lisäys, bugifiksejä
+
+
 **Yhteensä**
 
-16h
+22h
