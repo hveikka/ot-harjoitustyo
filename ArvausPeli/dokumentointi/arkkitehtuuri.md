@@ -41,6 +41,11 @@ Tämä näkymä sisältää itse pelin ja siihen vaadittavat toimivuudet. Pelin 
 Loppunäkymä. Kun käyttäjä on hävinnyt pelin EndView näyttää lopulliset pisteet ja ohjeistaa käyttäjän takaisin alkuun.
 
 
+## Tiedostot
+
+Sovellus käyttää tekstitiedostoa "users" johon se kirjoittaa pelaajien pisteitä ja lukee ne pistetaulukoita varten. 
+Tekstitiedoston sisältö on muotoa (nimi,pisteet) eli esimerkiksi "Kimmo,9".
+
 
 ## Sovelluslogiikka
 
@@ -51,7 +56,6 @@ Ohjelma sisältää hyvin vähän sovelluslogiikkaa sen rakenteen takia. Tässä
 
 
 
+## Sekvenssikaavio
 
-
-
-*Sovelluksen arkkitehtuuria päivitetään tulevaisuudessa sen kasvaessa.
+![alt text](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/sekvens.jpg)

@@ -19,8 +19,8 @@ public class QuestionTest {
 
     @Test
     public void addingQuestions() {
-        testQuestions.addQuestion("a", "b", "c", "d", "e");
-        assertEquals(testQuestions.getQuests().size(), 1);
+        testQuestions.addQuestion("a", "b", "c", "d", "e", 1);
+        assertEquals(testQuestions.getEasyQuests().size(), 1);
 
     }
     @Test

@@ -43,7 +43,6 @@ public class MainView extends Application {
             mainComp.setCenter(gameW.getGameview());
             startButton.setVisible(false);
             endButton.setVisible(true);
-            gameW.getGameview();
 
         });
 

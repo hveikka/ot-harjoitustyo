@@ -1,5 +1,9 @@
 package arvauspeli.logics;
 
+/**
+ * Luokka kysymyksiä varten.
+ */
+
 public class Question {
 
     private String oikea;

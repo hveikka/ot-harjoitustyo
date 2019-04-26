@@ -1,7 +1,6 @@
 package arvauspeli.gui;
 
 import arvauspeli.logics.User;
-import arvauspeli.gui.MainView;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
