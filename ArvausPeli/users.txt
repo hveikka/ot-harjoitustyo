@@ -1,3 +1,4 @@
 Kimmo,5
 Tommi,6
 Matti,0
+Veikka,2

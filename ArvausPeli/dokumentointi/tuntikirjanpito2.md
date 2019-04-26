@@ -24,7 +24,11 @@ Ohjelman laajennus/muokkaus, arkkitehtuuri-osion päivitys. Joitain viikon 5 jut
 
 Pistetiedoston lisäys, ulkoasun muokkaus, kysymysten lisäys, bugifiksejä
 
+**26.4. / 4h**
+
+Vaikeustasot, dokumentoinnin parantelua, kysymysten lisäystä jne.
+
 
 **Yhteensä**
 
-22h
+26h
