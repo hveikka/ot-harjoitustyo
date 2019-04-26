@@ -17,28 +17,28 @@ java -jar ArvausPeliAlpha.jar
 
 Peli aukeaa aloitusnäkymään josta pääsee pistelistoihin, ohjeisiin ja josta pystyy aloittamaan pelaamisen.
 
-(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/alkukuva.jpg)
+(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/alkukuva.png)
 
 
 Pelistä löytyvät myös ohjeet jos satut unohtamaan ne jostain syystä.
 
-(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/ohjeet.jpg)
+(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/ohjeet.png)
 
 
 **Koska en osannut tehdä sillein hienosti että peli lukisi nimen samalla kun sen aloittaa joudut valitettavasti painamaan vielä Enter-näppäintä nimen syötettyäsi**
 Kun ruutuun tulee teksti "Hei (nimesi)!" voit aloittaa pelin.
 
-(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/opetusEnter.jpg)
+(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/opetusEnter.png)
 
 Peli jatkuu niin pitkään kun vastaat oikein. Valitse oikea vaihtoehto ja klikkaa sitä.
 
-(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/pelinakyma.jpg)
+(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/pelinakyma.png)
 
 
 Kun lopulta vastaat väärin peli päättyy. Pääset takasin alkuun painamalla "Lopeta peli"-nappulaa.
 
 
-(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/loppu.jpg)
+(https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/loppu.png)
 
 
 
