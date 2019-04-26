@@ -6,6 +6,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+/**
+ *
+ * Ohjeet-ikkunan toimintaa hoitava luokka.
+ */
 public class HelpView {
 
     Parent getHelpView() {

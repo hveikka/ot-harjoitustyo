@@ -16,12 +16,19 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+/**
+ * Luokka pyörittää peliä sen pelaamisen aikana. Kysymysten lisäys tapahtuu myös
+ * tässä luokassa.
+ */
 public class GameView extends MainView {
 
     private Questions questions;
     private Question question;
     private int diff = 1;
 
+    /**
+     *
+     */
     public GameView() {
         this.questions = new Questions();
 
@@ -63,6 +70,10 @@ public class GameView extends MainView {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public Parent getGameview() {
 
         BorderPane main1 = new BorderPane();

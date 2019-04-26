@@ -1,9 +1,7 @@
 package arvauspeli.gui;
 
 import arvauspeli.logics.User;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
 import javafx.geometry.Insets;
 import arvauspeli.logics.Score;
 import java.io.IOException;
@@ -16,6 +14,9 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.paint.Color;
 
+/**
+ * Tämä luokka pitää huolen lopetusnäkmästä.
+ */
 public class EndView {
 
     Parent getEndView() throws FileNotFoundException, IOException, Exception {

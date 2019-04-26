@@ -11,8 +11,15 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+/**
+ * Pääluokka, joka käynnistää pelin ja vaihtelee ruutuja.
+ */
 public class MainView extends Application {
 
+    /**
+     *
+     * @param stage
+     */
     @Override
     public void start(Stage stage) {
 
@@ -62,6 +69,10 @@ public class MainView extends Application {
 
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         launch(MainView.class);
     }

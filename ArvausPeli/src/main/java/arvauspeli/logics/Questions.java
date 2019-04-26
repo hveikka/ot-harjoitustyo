@@ -8,11 +8,29 @@ import java.util.Random;
  */
 public class Questions {
 
+    /**
+     *
+     */
     public ArrayList<Question> easyQuestions;
+
+    /**
+     *
+     */
     public ArrayList<Question> medQuestions;
+
+    /**
+     *
+     */
     public ArrayList<Question> hardQuestions;
+
+    /**
+     *
+     */
     public int memory = 0;
 
+    /**
+     *
+     */
     public Questions() {
 
         this.easyQuestions = new ArrayList();
@@ -21,6 +39,15 @@ public class Questions {
 
     }
 
+    /**
+     * Lisää kysymyksen ja määrittelee oikean vastauksen sekä vaikeustason.
+     * @param main itse kysymys
+     * @param a vastausvaihtoehto
+     * @param b vastausvaihtoehto
+     * @param diff vaikeustaso
+     * @param right oikea vastausvaihtoehto
+     * @param c vastausvaihtoehto
+     */
     public void addQuestion(String main, String a, String b, String c, String right, int diff) {
         if (diff == 1) {
             easyQuestions.add(new Question(main, a, b, c, right));
@@ -33,14 +60,26 @@ public class Questions {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList getEasyQuests() {
         return easyQuestions;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList getMedQuests() {
         return medQuestions;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList getHardQuests() {
         return hardQuestions;
     }
@@ -48,7 +87,7 @@ public class Questions {
     /**
      * Metodi arpoo käyttäjälle satunnaisen kysymyksen listasta.
      *
-     * @param difficulty ohjelma säätelee kysymysten vaikeutta.
+     * @param difficulty säätelee kysymysten vaikeutta.
      *
      * @return satunnainen kysymys
      */

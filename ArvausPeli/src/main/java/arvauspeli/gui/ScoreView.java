@@ -8,6 +8,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+/**
+ * Luokka joka vastaa Pisteet-ikkunasta.
+ */
 public class ScoreView {
 
     Parent getScoreView() throws FileNotFoundException {

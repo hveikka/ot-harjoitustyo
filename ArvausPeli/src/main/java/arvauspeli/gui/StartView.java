@@ -18,12 +18,22 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
+/**
+ * Luokka joka on vastuussa käyttäjän nimen tallenuksesta ja pelin aloituksesta.
+ */
 public class StartView extends MainView {
 
+    /**
+     *
+     */
     public StartView() {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public Parent getStart() {
 
         BorderPane main1 = new BorderPane();

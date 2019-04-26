@@ -7,10 +7,20 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-
-
+/**
+ *
+ * @author hveikka
+ */
 public class Score {
 
+    /**
+     * Metodi antaa valitun määrän tuloksia tulostaulusta.
+     *
+     * @param t tulosten määrä
+     *
+     * @return tulokset yhtenä String juttuna.
+     * @throws java.io.FileNotFoundException
+     */
     public static String getScores(int t) throws FileNotFoundException {
         int counter = 0;
         String nameScore = "";
@@ -41,6 +51,14 @@ public class Score {
         return nameScore;
     }
 
+    /**
+     * Metodi kirjoittaa käyttäjän pisteet listoille.
+     *
+     * @param n nimi
+     * @param s pisteet
+     * @throws java.io.IOException
+     * @throws java.lang.Exception
+     */
     public static void writeScore(String n, int s) throws IOException, Exception {
         File file = new File("users.txt");
         FileWriter fw = new FileWriter(file, true);
