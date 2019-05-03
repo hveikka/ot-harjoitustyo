@@ -58,4 +58,4 @@ Ohjelma sisältää hyvin vähän sovelluslogiikkaa sen rakenteen takia. Tässä
 
 ## Sekvenssikaavio
 
-![alt text](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/sekvens.jpg)
+![alt text](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/sekvens.png)

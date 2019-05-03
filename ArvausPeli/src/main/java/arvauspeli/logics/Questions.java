@@ -1,6 +1,7 @@
 package arvauspeli.logics;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -26,7 +27,9 @@ public class Questions {
     /**
      *
      */
-    public int memory = 0;
+    public int memory = -1;
+    public int memory2 = -1;
+    public int memory3 = -1;
 
     /**
      *
@@ -52,12 +55,15 @@ public class Questions {
     public void addQuestion(String main, String a, String b, String c, String right, int diff) {
         if (diff == 1) {
             easyQuestions.add(new Question(main, a, b, c, right));
+            Collections.shuffle(easyQuestions);
         }
         if (diff == 2) {
             medQuestions.add(new Question(main, a, b, c, right));
+            Collections.shuffle(medQuestions);
         }
         if (diff == 3) {
             hardQuestions.add(new Question(main, a, b, c, right));
+            Collections.shuffle(hardQuestions);
         }
     }
 
@@ -85,6 +91,17 @@ public class Questions {
         return hardQuestions;
     }
 
+    public void shuffle() {
+        Collections.shuffle(easyQuestions);
+        Collections.shuffle(medQuestions);
+        Collections.shuffle(hardQuestions);
+    }
+    public void newGame(){
+        memory = 0;
+        memory2 = 0;
+        memory3 = 0;
+    }
+
     /**
      * Metodi arpoo käyttäjälle satunnaisen kysymyksen listasta.
      *
@@ -96,33 +113,23 @@ public class Questions {
         Random ranm = new Random();
 
         if (difficulty == 1) {
-            int number = ranm.nextInt(easyQuestions.size());
-            while (number == memory) {
-                number = ranm.nextInt(easyQuestions.size());
-            }
-            memory = number;
 
-            return easyQuestions.get(number);
+            memory++;
+            return easyQuestions.get(memory);
         }
         if (difficulty == 2) {
-            int number = ranm.nextInt(medQuestions.size());
-            while (number == memory) {
-                number = ranm.nextInt(medQuestions.size());
-            }
-            memory = number;
+            memory = 0;
+            memory2++;
 
-            return medQuestions.get(number);
+            return medQuestions.get(memory2);
         }
         if (difficulty == 3) {
-            int number = ranm.nextInt(hardQuestions.size());
-            while (number == memory) {
-                number = ranm.nextInt(hardQuestions.size());
-            }
-            memory = number;
+            memory2 = 0;
+            memory3++;
 
-            return hardQuestions.get(number);
+            return hardQuestions.get(memory3);
         }
-
+        memory3 = 0;
         int number = ranm.nextInt(hardQuestions.size());
         while (number == memory) {
             number = ranm.nextInt(hardQuestions.size());

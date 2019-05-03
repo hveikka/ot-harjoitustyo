@@ -40,8 +40,18 @@ public class GameView extends MainView {
         questions.addQuestion("Mikä seuraavista on Suomen pääkaupunki?", "Helsinki",
                 "Tampere", "Lappeenranta", "Helsinki", 1);
         questions.addQuestion("Onko kuu tehty juustosta?", "On", "Ehkä", "Ei", "Ei", 1);
+        questions.addQuestion("Kuka on Suomen presidentti?",
+                "Niinistö", "Kekkonen", "Mannerheim", "Niinistö", 1);
+        questions.addQuestion("Paljonko maksaa edullinen lounas" + "\n"
+                + "opiskelijalle Unicafessa?", "10€", "2,60€", "Ruoka on ilmaista", "2,60€", 1);
         questions.addQuestion("Onko tämä peli hyvä peli?", "On", "Ei", "Tää on paras", "Tää on paras", 1);
+        questions.addQuestion("Minä päivänä Exactumin Unicafesta saa pitsaa?",
+                "Perjantaina", "Keskiviikkona", "Maanantaina", "Perjantaina", 1);
         questions.addQuestion("Minä vuonna Suomi itsenäistyi?", "2011", "1995", "1917", "1917", 2);
+        questions.addQuestion("Ketkä opiskelevat Meilahden " + "\n"
+                + "kampuksella?", "Oikis", "Kauppis", "Lääkis", "Lääkis", 2);
+        questions.addQuestion("Mikä planeetta on kuudes " + "\n"
+                + "auringosta katsottuna?", "Saturnus", "Uranus", "Venus", "Saturnus", 2);
         questions.addQuestion("Paljonko on 365 + 420?", "785", "675", "805", "785", 2);
         questions.addQuestion("Minä vuonna iPhone julkaistiin?", "2005", "2007", "2009", "2007", 2);
         questions.addQuestion("Minä vuonna Suomi liittyi EU:hun?", "1992", "2001", "1995", "1995", 2);
@@ -51,20 +61,26 @@ public class GameView extends MainView {
                 + " Nobel-palkinnon?", "2", "4", "0", "4", 2);
         questions.addQuestion("Monta rajanaapuria Suomella on?", "4", "2", "3", "3", 2);
         questions.addQuestion("Miten pitkä on maili?", "1,6km", "2km", "1,2km", "1,6km", 2);
+        questions.addQuestion("Mikä maa voitti jalkapallon" + "\n" + " maailmanmestaruuden"
+                + " vuonna 2014?", "Italia", "Saksa", "Brasilia", "Saksa", 2);
+        questions.addQuestion("Minkä ikäisenä saat ostaa yli 22% alkoholia?", "18", "21", "20", "20", 2);
+        questions.addQuestion("Mikä on Australian pääkaupunki?", "Sydney", "Canberra", "Melbourne", "Canberra", 2);
+        questions.addQuestion("Mikä seuraavaista ei ole tietotyyppi Javassa?", "Boolean", "Integer", "Letter", "Letter", 2);
+        questions.addQuestion("Kuka on Led Zeppelinin laulaja?", "Robert Plant", "Jimmy Page", "John Paul Jones", "Robert Plant", 3);
+        questions.addQuestion("Mikä on Suomen pisin joki?", "Vantaanjoki", "Kalajoki", "Kemijoki", "Kemijoki", 3);
+        questions.addQuestion("Minkä ikäisenä Jimi Hendrix kuoli?", "23", "32", "27", "27", 3);
         questions.addQuestion("Kuka on Suomen myydyin artisti?", "J.Karjalainen",
                 "Kari Tapio", "Jari Sillanpää", "J.Karjalainen", 3);
         questions.addQuestion("Missä maakunnassa Kurikka sijaitsee?",
                 "Pohjois-Karjala", "Etelä-Pohjanmaa", "Keski-Suomi", "Etelä-Pohjanmaa", 3);
-        questions.addQuestion("Mikä maa voitti jalkapallon" + "\n" + " maailmanmestaruuden"
-                + " vuonna 2014?", "Italia", "Saksa", "Brasilia", "Saksa", 2);
-        questions.addQuestion("Minä päivänä Exactumin Unicafesta saa pitsaa?",
-                "Perjantaina", "Keskiviikkona", "Maanantaina", "Perjantaina", 1);
-        questions.addQuestion("Minkä ikäisenä saat ostaa yli 22% alkoholia?", "18", "21", "20", "20", 2);
-        questions.addQuestion("Mikä on Australian pääkaupunki?", "Sydney", "Canberra", "Melbourne", "Canberra", 2);
-        questions.addQuestion("Kuka on Led Zeppelinin laulaja?", "Robert Plant", "Jimmy Page", "John Paul Jones", "Robert Plant", 3);
-        questions.addQuestion("Mikä on Suomen pisin joki?", "Vantaanjoki", "Kalajoki", "Kemijoki", "Kemijoki", 3);
-        questions.addQuestion("Mikä seuraavaista ei ole tietotyyppi Javassa?", "Boolean", "Integer", "Letter", "Letter", 2);
-        questions.addQuestion("Minkä ikäisenä Jimi Hendrix kuoli?", "23", "32", "27", "27", 3);
+        questions.addQuestion("Millä maalla on isoin BKT?", "Kiina", "Yhdysvallat", "Japani", "Yhdysvallat", 3);
+        questions.addQuestion("Mikä on maailman suurin nisäkäs?", "Norsu", "Naapurin rakki", "Sinivalas", "Sinivalas", 3);
+        questions.addQuestion("Mikä bändeistä on vanhin?", "Nirvana", "Blur", "Oasis", "Nirvana", 3);
+        questions.addQuestion("Mikä näistä alkuainesta on harvinaisin?", "Elohopea", "Platina", "Iridium", "Iridium", 3);
+        questions.addQuestion("Montako luotia mahtuu RK-62:sen " + "\n" + 
+                "lippaaseen?", "20", "30", "40", "30", 3);
+        
+        
 
         this.question = questions.rollQuest(1);
 
@@ -123,10 +139,13 @@ public class GameView extends MainView {
                 if (User.getScore() == 15) {
                     diff++;
                 }
-                if (User.getScore() == 25) {
+                if (User.getScore() == 24) {
                     diff++;
+                    questions.shuffle();
                 }
             } else {
+                diff = 1;
+                this.question = questions.rollQuest(1);
                 main1.setCenter(null);
                 try {
                     main1.setCenter(endW.getEndView());
@@ -156,10 +175,13 @@ public class GameView extends MainView {
                 if (User.getScore() == 15) {
                     diff++;
                 }
-                if (User.getScore() == 25) {
+                if (User.getScore() == 24) {
                     diff++;
+                    questions.shuffle();
                 }
             } else {
+                diff = 1;
+                this.question = questions.rollQuest(1);
                 main1.setCenter(null);
                 try {
                     main1.setCenter(endW.getEndView());
@@ -189,10 +211,13 @@ public class GameView extends MainView {
                 if (User.getScore() == 15) {
                     diff++;
                 }
-                if (User.getScore() == 25) {
+                if (User.getScore() == 24) {
                     diff++;
+                    questions.shuffle();
                 }
             } else {
+                diff = 1;
+                this.question = questions.rollQuest(1);
                 main1.setCenter(null);
                 try {
                     main1.setCenter(endW.getEndView());
