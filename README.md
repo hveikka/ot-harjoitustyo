@@ -69,5 +69,12 @@ Checkstylen voi suorittaa komennolla
 Jonka jälkeen tuloksia voidaan tarkastella selaimella avaamalla tiedosto target/site/checkstyle.html
 
 
+### JavaDoc
 
+JavaDoc generoidaan komennolla
 
+```
+ mvn javadoc:javadoc
+```
+
+JavaDocia voi tarkastella avaamalla selaimella tiedosto target/site/apidocs/index.html
