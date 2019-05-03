@@ -26,6 +26,9 @@ Sovelluksen avulla pystyy pelaamaan arvailupeliä. Yritä vastata mahdollisimman
 ## Releaset 
 
 
+[Viikon 7 release](https://github.com/hveikka/ot-harjoitustyo/releases/tag/viikko7)
+
+
 [Viikon 5 release](https://github.com/hveikka/ot-harjoitustyo/releases/tag/viikko5)
 
 
