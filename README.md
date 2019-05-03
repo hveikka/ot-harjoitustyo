@@ -19,6 +19,10 @@ Sovelluksen avulla pystyy pelaamaan arvailupeliä. Yritä vastata mahdollisimman
 [Käyttöohje](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/kayttoohjeet.md)
 
 
+
+[Testausdokumentti](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/testaus.md)
+
+
 ## Releaset 
 
 
