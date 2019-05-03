@@ -1,7 +1,7 @@
 # Käyttöohjeet
 
 
-Lataa tiedosto [ArvausPeliAlpha.jar](https://github.com/hveikka/ot-harjoitustyo/releases/tag/viikko5)
+Lataa tiedosto [ArvausPeliFinal.jar](https://github.com/hveikka/ot-harjoitustyo/releases/tag/viikko7)
 
 
 
@@ -10,7 +10,7 @@ Lataa tiedosto [ArvausPeliAlpha.jar](https://github.com/hveikka/ot-harjoitustyo/
 Ohjelma käynnistyy komennolla
 
 ```
-java -jar ArvausPeliAlpha.jar
+java -jar ArvausPeliFinal.jar
 ```
 
 ## Pelaaminen

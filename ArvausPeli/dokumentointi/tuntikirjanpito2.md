@@ -28,7 +28,12 @@ Pistetiedoston lisäys, ulkoasun muokkaus, kysymysten lisäys, bugifiksejä
 
 Vaikeustasot, dokumentoinnin parantelua, kysymysten lisäystä jne.
 
+**3.5. / 7h**
+
+Lopulliset muutokset, viimeinen release sekä muita päivityksiä.
+
+
 
 **Yhteensä**
 
-26h
+33h
