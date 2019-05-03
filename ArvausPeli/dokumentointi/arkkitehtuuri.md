@@ -44,7 +44,7 @@ Loppunäkymä. Kun käyttäjä on hävinnyt pelin EndView näyttää lopulliset 
 ## Tiedostot
 
 Sovellus käyttää tekstitiedostoa "users" johon se kirjoittaa pelaajien pisteitä ja lukee ne pistetaulukoita varten. 
-Tekstitiedoston sisältö on muotoa (nimi,pisteet) eli esimerkiksi "Kimmo,9".
+Tekstitiedoston sisältö on muotoa (nimi,pisteet) eli esimerkiksi "Kimmo,9". Lisäksi se luo testitiedoston "testfile_users" jota se ei jostain syystä osa poistaa. Testitiedostosta ei tarvitse välittää.
 
 
 ## Sovelluslogiikka

@@ -6,24 +6,26 @@ Sovellus antaa käyttäjälle kysymyksiä ja käyttäjä yrittää päästä mah
 
 **Käyttöliittymäluonnos**
 
-![alt text](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/vaatimuskuva.jpg)
+![alt text](https://github.com/hveikka/ot-harjoitustyo/blob/master/ArvausPeli/dokumentointi/liittymaluonnos2.jpg)
 
-Ensimmäisessä näkymässä käyttäjä voi katsoa ohjeet (unohtuivat hienosta paint-taideteoksesta), katsoa pistelistoja tai lisätä nimensä ja aloittaa peli. Seuraavassa näkymässä on mahdollinen toteutus itse pelille. Ohjelma arpoo kysymyksiä tietokannasta ja jos käyttäjä vastaa oikein hän saa uuden kysymyksen. Kun käyttäjä vastaa lopulta väärin, tulee näkymä jossa on parhaat pisteet ja mahdollisuus aloittaa alusta (ja hänen omat pisteensä tietenkin..).
+Ensimmäisessä näkymässä käyttäjä pystyy lukemaan ohjeet , katsoa pistelistoja tai lisätä nimensä ja ruveta pelaamaan. Vasemmalta ylhäältä katsottuna on ensin ohjenäkymä ja sitten pistenäkymä. Oikeassa yläkulmassa on pelinäkymä ja sen alapuolella loppunäkymä, johon päädytään kun käyttäjä vastaa väärin. Ohjelma arpoo kysymyksiä ja jos käyttäjä vastaa oikein hän saa uuden kysymyksen. 
 
-**Perusversion toiminnallisuus**
+**Viikon 7 toiminnallisuus**
 
-* Käyttäjä pystyy laittamaan nimensä
-* Käyttäjä pystyy arvailla kysymyksiä mitä ohjelma hänelle tarjoaa
+* Käyttäjä pystyy lukemaan ohjeet
+* Käyttäjä voi tutkia pistetilastoja (vain 10 parasta pääsevät taululle tilan puutteen vuoksi)
+* Peliä pystyy pelaamaan
+* Kysymykset muuttuvat vaikeammiksi pelin edetessä.
+
 
 
 **Jatkokehitysideoita**
 
-Perusversiossa yritetään saada graafinen käyttöliittymä edes jotenkin toimimaan.
 
-Sen jälkeen olisi tarkoitus lisäillä seuraavia ominaisuuksia:
 
-* Tulostaulu (jolla jotain tekemistä tietokantojen kanssa)
-* Kysymyksien lisääminen
+Peliin olisi mahdollista lisäillä seuraavia ominaisuuksia:
+
+* Käyttäjälle mahdollisuus lisätä omia kysymyksiä
 * High score boardin siirtäminen nettiin (jotenkin)
 * Hienommat grafiikat
 * Erilaisten toimintojen lisäys:

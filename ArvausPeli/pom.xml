@@ -39,7 +39,6 @@
                 <configuration>
                     <excludes>
                         <exclude>arvauspeli/gui/*</exclude>
-                        <exclude>arvauspeli/logics/Score</exclude>
                     </excludes>
                 </configuration>    
                 <executions>

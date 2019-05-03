@@ -41,6 +41,7 @@ public class Questions {
 
     /**
      * Lisää kysymyksen ja määrittelee oikean vastauksen sekä vaikeustason.
+     *
      * @param main itse kysymys
      * @param a vastausvaihtoehto
      * @param b vastausvaihtoehto
@@ -89,7 +90,7 @@ public class Questions {
      *
      * @param difficulty säätelee kysymysten vaikeutta.
      *
-     * @return satunnainen kysymys
+     * @return palauttaa satunnaisen kysymyksen.
      */
     public Question rollQuest(int difficulty) {
         Random ranm = new Random();
@@ -122,6 +123,12 @@ public class Questions {
             return hardQuestions.get(number);
         }
 
-        return easyQuestions.get(0);
+        int number = ranm.nextInt(hardQuestions.size());
+        while (number == memory) {
+            number = ranm.nextInt(hardQuestions.size());
+        }
+        memory = number;
+
+        return hardQuestions.get(number);
     }
 }

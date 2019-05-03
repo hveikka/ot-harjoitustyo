@@ -1,7 +1,7 @@
 package arvauspeli.logics;
 
 /**
- * Käyttäjä luokka palauttaa käyttäjän nimeä ja pisteitä.
+ * Käyttäjäluokka palauttaa käyttäjän nimen ja pisteet.
  */
 public class User {
 

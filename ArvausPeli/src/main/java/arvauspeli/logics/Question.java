@@ -11,7 +11,6 @@ public class Question {
     private String q2;
     private String q3;
 
-
     public Question(String main, String a, String b, String c, String oikea) {
         this.q1 = a;
         this.q2 = b;

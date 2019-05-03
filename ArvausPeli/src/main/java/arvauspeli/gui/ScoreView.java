@@ -18,7 +18,7 @@ public class ScoreView {
         GridPane scoreGrid = new GridPane();
         Text scoreText = new Text("Pistetaulukko");
         scoreText.setFont(Font.font("Verdana", 25));
-        Text scores = new Text(Score.getScores(10));
+        Text scores = new Text(Score.getScores("users.txt", 10));
 
         scoreGrid.setAlignment(Pos.CENTER);
         scoreGrid.setVgap(50);

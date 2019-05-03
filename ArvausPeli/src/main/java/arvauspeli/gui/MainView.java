@@ -35,7 +35,7 @@ public class MainView extends Application {
         mainbox.setSpacing(10);
 
         Button startButton = new Button("Aloita peli");
-        Button endButton = new Button("Lopeta peli");
+        Button endButton = new Button("Pelaa uudestaan");
         endButton.setVisible(false);
         mainbox.getChildren().addAll(endButton);
         mainComp.setTop(mainbox);

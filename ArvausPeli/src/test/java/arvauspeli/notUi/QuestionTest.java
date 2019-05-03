@@ -31,20 +31,20 @@ public class QuestionTest {
 
     @Test
     public void rollQuestions() {
-        testQuestions.addQuestion("a", "b", "c", "d", "b", 1);
-        testQuestions.addQuestion("a", "b", "c", "d", "b", 1);
+        testQuestions.addQuestion("a1", "b1", "c1", "d1", "b1", 1);
+        testQuestions.addQuestion("a1", "b1", "c1", "d1", "b1", 1);
 
-        assertEquals(testQuestions.rollQuest(1).getA(), "b");
+        assertEquals(testQuestions.rollQuest(1).getA(), "b1");
 
-        testQuestions.addQuestion("a", "b", "c", "d", "b", 2);
-        testQuestions.addQuestion("a", "b", "c", "d", "b", 2);
+        testQuestions.addQuestion("a2", "b2", "c2", "d2", "b2", 2);
+        testQuestions.addQuestion("a2", "b2", "c2", "d2", "b2", 2);
 
-        assertEquals(testQuestions.rollQuest(2).getA(), "b");
+        assertEquals(testQuestions.rollQuest(2).getA(), "b2");
 
-        testQuestions.addQuestion("a", "b", "c", "d", "b", 3);
-        testQuestions.addQuestion("a", "b", "c", "d", "b", 3);
+        testQuestions.addQuestion("a3", "b3", "c3", "d3", "b3", 3);
+        testQuestions.addQuestion("a3", "b3", "c3", "d3", "b3", 3);
 
-        assertEquals(testQuestions.rollQuest(3).getA(), "b");
+        assertEquals(testQuestions.rollQuest(3).getA(), "b3");
 
     }
 

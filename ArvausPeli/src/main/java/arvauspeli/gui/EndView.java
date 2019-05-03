@@ -15,12 +15,13 @@ import javafx.scene.text.Text;
 import javafx.scene.paint.Color;
 
 /**
- * Tämä luokka pitää huolen lopetusnäkmästä.
+ * Tämä luokka pitää huolen lopetusnäkymästä.
  */
 public class EndView {
 
     Parent getEndView() throws FileNotFoundException, IOException, Exception {
 
+        Score.writeScore("users.txt", User.getName(), User.getScore());
         GridPane endGrid = new GridPane();
         endGrid.setVgap(10);
         endGrid.setHgap(10);
@@ -35,18 +36,16 @@ public class EndView {
         vBox.setSpacing(20);
         Text endText2 = new Text("Pisteesi: " + User.getScore());
         endText2.setFont(Font.font("verdana", 20));
-        Text endText3 = new Text("Paina 'Lopeta peli' päästäksesi alkuun.");
+        Text endText3 = new Text("Paina 'Pelaa uudestaan' pelataksesi uudestaan.");
         endText3.setFont(Font.font("verdana", 20));
-        Text scoreText = new Text("Tuloksia");
+        Text scoreText = new Text("Top 5 pelaajat");
         scoreText.setFont(Font.font("verdana", 20));
         Text score = new Text("Pisteet");
         vBox.getChildren().addAll(endText2, endText3, scoreText, score);
 
         endGrid.add(vBox, 1, 2);
 
-        Score.writeScore(User.getName(), User.getScore());
-
-        score.setText(Score.getScores(5));
+        score.setText(Score.getScores("users.txt", 5));
 
         User.setScore(0);
 
